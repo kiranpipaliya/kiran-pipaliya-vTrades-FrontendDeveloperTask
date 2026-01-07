@@ -1,26 +1,64 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --background: #1e1e1e;
+    --foreground: #ffffff;
+
+    --font-sans: var(--font-source-sans);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-sans);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-style: normal;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-source-sans), sans-serif;
+}
+
+/* utilities */
+.card {
+    @apply rounded-lg bg-gray-900 p-4 text-white shadow;
+}
+
+.btn-primary {
+    @apply bg-blue-600 text-white px-4 py-2 rounded;
+}
+
+.btn-secondary {
+    @apply bg-gray-700 text-white px-4 py-2 rounded;
+}
+
+/* Firefox */
+html {
+    scrollbar-width: 2px;
+    scrollbar-color: #2a2a2a transparent;
+}
+
+/* Chrome, Edge, Safari */
+html::-webkit-scrollbar {
+    width: 2px;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: #2a2a2a;
+    border-radius: 999px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+    background-color: #3a3a3a;
 }
