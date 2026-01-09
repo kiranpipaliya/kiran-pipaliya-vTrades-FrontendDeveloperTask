@@ -72,6 +72,7 @@ types/
 
 ## 🔐 Features
 
+- Google Authentication  
 - User Signup  
 - User Login  
 - OTP Verification  
