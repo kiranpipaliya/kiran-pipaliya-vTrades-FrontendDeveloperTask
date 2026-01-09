@@ -1,36 +1,126 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# V-Trades Frontend
 
-## Getting Started
+A modern **Next.js (App Router)** frontend application implementing a complete authentication flow and dashboard structure. This project was built as part of a frontend assessment and focuses on clean architecture, reusable components, and mock API handling using Next.js Route Handlers.
 
-First, run the development server:
+🌐 **Live Application**  
+https://kiran-pipaliya-v-trades-frontend-de.vercel.app/login
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 🚀 Tech Stack
+
+- Next.js 14+ (App Router)
+- React
+- TypeScript
+- Tailwind CSS
+- NextAuth
+- REST APIs (Mocked using Route Handlers)
+- Vercel (Deployment)
+
+---
+
+## 📁 Project Structure
+
+```txt
+app/
+ ├─ (auth)/
+ │   ├─ login/
+ │   ├─ signup/
+ │   ├─ otp/
+ │   ├─ forgot-password/
+ │   ├─ create-new-password/
+ │   └─ layout.tsx
+ │
+ ├─ api/
+ │   ├─ auth/
+ │   │   ├─ login/route.ts
+ │   │   ├─ signup/route.ts
+ │   │   ├─ verify-otp/route.ts
+ │   │   ├─ resend-otp/route.ts
+ │   │   ├─ forgot-password/route.ts
+ │   │   └─ reset-password/route.ts
+ │   └─ trades/route.ts
+ │
+ ├─ dashboard/
+ │   └─ page.tsx
+ │
+ ├─ layout.tsx
+ └─ page.tsx
+
+components/
+ ├─ auth/
+ │   ├─ LoginForm.tsx
+ │   ├─ SignupForm.tsx
+ │   ├─ OtpForm.tsx
+ │   ├─ ForgotPasswordForm.tsx
+ │   ├─ CreateNewPasswordForm.tsx
+ │   └─ TextInput.tsx
+ │
+ └─ ui/
+     ├─ PrimaryButton.tsx
+     ├─ ErrorState.tsx
+     ├─ SuccessModal.tsx
+     └─ Navbar.tsx
+
+lib/
+ ├─ api.ts
+ └─ cn.ts
+
+types/
+ └─ trade.ts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔐 Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- User Signup  
+- User Login  
+- OTP Verification  
+- Resend OTP  
+- Forgot Password  
+- Reset / Create New Password  
+- Protected Dashboard Route  
+- Mock APIs using Next.js Route Handlers  
+- Reusable and scalable UI components  
+- Fully responsive layout  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🛠️ Getting Started
 
-To learn more about Next.js, take a look at the following resources:
+### 1. Clone the repository
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+git clone <repository-url>
+cd v-trades-frontend
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 2. Install dependencies
+```bash
+npm install
+```
 
-## Deploy on Vercel
+### 3. Run the development server
+```bash
+npm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🔌 API Handling
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+All backend interactions are handled using **Next.js Route Handlers** under the `app/api` directory.  
+Currently, mock APIs are implemented to simulate authentication and trade data, making it easy to plug in real backend services later.
+
+---
+
+## 📦 Deployment
+
+The application is deployed on **Vercel**.
+
+🔗 **Live URL**  
+https://kiran-pipaliya-v-trades-frontend-de.vercel.app/login
+
+---
+
+## 👤 Author
+
+**Kiran Pipaliya**  
+Frontend Developer (React / Next.js)
